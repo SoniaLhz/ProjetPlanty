@@ -11,28 +11,45 @@ Updated: 2023-10-10 09:22:43
 
 /* HEADER */
 
+#menu-header {
+
+    display:flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: end;
+}
 
 
-#header.sticky-top {
 
-    position: sticky;
+#header.ctop {
+
     z-index: 10;
     top:0;
     background-color: white;
+ 
+    
 
 
 }
 
 li.menu-item a {
     color:black;
-    display:inline-block;
     padding: 10px 25px;
     background-color: pink;
-    border-radius: 10px;
     text-align: center;
+    text-decoration: none;
+    margin: 0 0 0 15px;
+    
 
 }
 
+logo {
+
+    width: 61px;
+    height: 19px;;
+    padding-top: 30px;
+
+}
 
 
 
@@ -42,6 +59,22 @@ li.menu-item a {
 #site-footer {
     padding: 20px;
     text-align: center;
-    color: #6d6d6d;
-    background-color: #C8D6CF !important;
+    color: black;
+    background-color: white !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
  }
+
+
+ /* formulaire 1 */
+
+#wpforms-submit {
+
+   justify-content: center;
+    
+ }
+
+#wpforms-submit {
+
+    background-color: #e0b9b4;
+
+}
