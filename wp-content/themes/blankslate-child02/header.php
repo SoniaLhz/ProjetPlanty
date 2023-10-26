@@ -9,8 +9,9 @@
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
 <header id="header" class= "top" role="banner">
-<img class="logo" src="images/planty.png" alt="image du logo Planty">  
-<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">1
+<a href="http://planty.local/home/">
+<img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/image/Logo.png' ); ?>" alt="image du logo Planty">  
+<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </nav>
 </header>
