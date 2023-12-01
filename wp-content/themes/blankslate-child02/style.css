@@ -11,22 +11,89 @@ Updated: 2023-10-10 09:22:43
 
 /* HEADER */
 
+#header-planty{
+
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link{
+    
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 60px;
+
+}
+.menu-planty{
+
+    flex-grow: 1;
+    height: 80px;
+   
+
+
+}
+
+#menu-planty{
+
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 15px;
+}
+
+.menu-header-container{
+
+    display: flex; 
+    align-items: center;
+    height: 80px;
+}
+
+
 
 #menu-header {
 
     display:flex;
+    align-items: center;
     flex-direction: row;
-    padding: 20px;
     justify-content: end;
+    height: 80px;
     
+
+    
+    
+    
+}
+
+#menu-header li:nth-child(3) {
+    order:1;
+    background-color: #E0B9B4;
+    color: white !important;
+    
+    
+
+}
+
+#menu-header li:nth-child(3):hover{
+
+    background-color:#C02E44;
+    ;
+}
+
+#menu-header li:nth-child(3) a {
+
+    color: white;
 }
 
 
 
 #header.ctop {
 
-    /* z-index: 10;
-    top:0; */
+    z-index: 10;
+    top:0;
     background-color: white;
  
     
@@ -35,11 +102,21 @@ Updated: 2023-10-10 09:22:43
 }
 
 li.menu-item a {
-    color:black;
+    color: black;
     padding: 8px 20px;
     text-align: center;
     text-decoration: none;
     margin: 0 0 0 15px;
+    font-family: "Syne";
+
+
+}
+
+li.menu-item {
+
+    height:100% ;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -47,34 +124,47 @@ li.menu-item a {
 
 .logo {
 
-    width: 200px;
-    padding-top:20px;
+    display:flex;
+    flex-wrap: wrap;
     margin-left: 20px;
+    width: 240px;
     
 
 
 
 }
 
+@media screen and (max-width: 500px) {
+    #header-planty {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+  }
+
 
 /*Formulaire nous rencontrer*/
 
 
-    .nr-label{
-
-        font-family: "Syne";
+.nr-label {
+    
+    font-family: "Syne";
         
         
-    }
+        
+        
+}
 
     
 
-    .wpcf7-form input, .wpcf7-form textarea{
+.wpcf7-form input, .wpcf7-form textarea{
         width:100%;
         background:white;
         height:40px;
         border:none;
         border-radius:5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     
     }
 
@@ -83,7 +173,7 @@ li.menu-item a {
         height: 240px;
     }
 
-    .wpcf7-form input[type=submit]{
+    .wpcf7-form input[type=submit] {
         background:#E0B9B4;
         font-size:15px;
         color: white;
@@ -97,42 +187,121 @@ li.menu-item a {
         display: flex;
         justify-content: center;
         padding-top: 15px;
+        
     }
 
+    /* commande bouton */
+
+    .container{
+        display: flex;
+        width: 100%;
+    }
+
+    .buttonform {
+
+        background-color: white;
+        width: 60%;
+        height: 56px;
+        border: none;
+        border-radius: 2px 0 0 2px !important;
+
+        
+
+    }
+
+    .buttonselect{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        height: 56px;
+        border: none;
+        border-radius: 0 2px 2px 0px !important;
+        background-color: #E0B9B4;
+    }
+
+    .plus{
+        
+        display: flex;
+        width: 100%;
+        height:28px ;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid white;
+        color: white;
+    }
+
+    .moins{
+
+        display: flex;
+        width: 100%;
+        height: 28px;  
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    #button-ok{
+
+        height: 56px;
+        width: 100%;
+        background-color: #E0B9B4;
+        border: none;
+        color: white;
+        font-family: "Syne";
+        border-radius: 2px;
+        
+    }
+
+
     /* formulaire info/livraison */
+
+    .title-cfm{
+
+        font-family: "Syne";
+        font-size: 30px;
+        margin-bottom: 20px;
+
+        
+       
+    }
 
     .cd-container{
 
         display:flex;
         gap:10px;
         justify-content: space-between;
+        font-family: "Syne";
+        color: white;
     }
 
     .cd-col1{
 
         width: 50%;
-
+        
+        
     }
 
     .cd-col2{
 
-        width: 50%;
-        
+       
+        width:50%; 
+        border-left: 2px solid white;
+        display: inline-block;  
+        padding-left: 15px;
 
     }
 
-    .il-label{
-
-        font-family: "Syne";
-        color: white;
-
-
-    }
+    
     .il-button{
 
         display: flex;
         justify-content: center;
-        padding-top: 15px;
+        padding-top: 25px;
+    }
+
+    .namecfm{
+
+        margin-bottom: 0 !important;
     }
 
 
@@ -143,6 +312,6 @@ li.menu-item a {
     text-align: center;
     color: black;
     background-color: white !important;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Syne";
  }
 
