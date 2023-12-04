@@ -68,7 +68,7 @@ Updated: 2023-10-10 09:22:43
     
 }
 
-#menu-header li:nth-child(3) {
+#menu-header li:nth-child(2) {
     order:1;
     background-color: #E0B9B4;
     color: white !important;
@@ -77,13 +77,13 @@ Updated: 2023-10-10 09:22:43
 
 }
 
-#menu-header li:nth-child(3):hover{
+#menu-header li:nth-child(2):hover{
 
     background-color:#C02E44;
     ;
 }
 
-#menu-header li:nth-child(3) a {
+#menu-header li:nth-child(2) a {
 
     color: white;
 }
@@ -134,12 +134,33 @@ li.menu-item {
 
 }
 
+.admin-wp{
+
+    color: black;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 0 15px;
+    font-family: "Syne";
+
+
+}
+
+
+
 @media screen and (max-width: 500px) {
     #header-planty {
         float: none;
         display: block;
         text-align: left;
     }
+
+    li.menu-item a {
+    
+        margin: 0;
+    }
+
+
   }
 
 

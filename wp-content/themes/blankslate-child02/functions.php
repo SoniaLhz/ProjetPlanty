@@ -1,4 +1,4 @@
-<?php
+ <?php
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -20,5 +20,13 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
+
+add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
+function add_extra_item_to_nav_menu( $items, $args ) {
+    if (is_user_logged_in()) {
+        $items .= '<li><a class="admin-wp" href="http://planty.local/wp-login.php?'. get_permalink( get_option('woocommerce_myaccount_page_id') ) .'">Admin</a></li>';
+    }
+    return $items;
+}
 
 // END ENQUEUE PARENT ACTION
